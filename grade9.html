@@ -2,9 +2,9 @@
 <html lang="zh-Hant"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="翰林版國九上 Unit 1–2 段考單字複習：聽音拼字、字母方塊、康乃爾筆記，全部有發音。">
+<meta name="description" content="翰林版國九上 Unit 1–3 段考單字複習：聽音拼字、字母方塊、康乃爾筆記，全部有發音。">
 <meta property="og:title" content="國九上單字拼字蜂">
-<meta property="og:description" content="翰林版國九上 Unit 1–2 段考單字複習：聽音拼字、字母方塊、康乃爾筆記，全部有發音。">
+<meta property="og:description" content="翰林版國九上 Unit 1–3 段考單字複習：聽音拼字、字母方塊、康乃爾筆記，全部有發音。">
 <title>國九上單字拼字蜂</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -243,8 +243,8 @@ button:focus-visible,input:focus-visible,.chip:focus-within{outline:3px solid va
     <div class="step">
       <h2><span class="n">1</span>選年級</h2>
       <div class="grades">
-        <button class="grade" id="g7" aria-pressed="true"><b>七年級・國七上</b><span>Unit 1 Who's That? ／ Unit 2 Where's the Comic Book?</span></button>
-        <button class="grade" id="g9" aria-pressed="false"><b>九年級・國九上</b><span>Unit 1 Have You Ever Been to an Art Museum? ／ Unit 2 The Movie Looks Exciting</span></button>
+        <button class="grade" id="g7" aria-pressed="true"><b>七年級・國七上</b><span>U1 Who's That? ／ U2 Where's the Comic Book? ／ U3 Open the Magic Door</span></button>
+        <button class="grade" id="g9" aria-pressed="false"><b>九年級・國九上</b><span>U1 Have You Ever Been to an Art Museum? ／ U2 The Movie Looks Exciting ／ U3 A Hero with Four Legs</span></button>
       </div>
     </div>
 
@@ -253,8 +253,10 @@ button:focus-visible,input:focus-visible,.chip:focus-within{outline:3px solid va
       <div class="chips">
         <label class="chip"><input type="checkbox" id="u1" checked><span class="box"></span>Unit 1</label>
         <label class="chip"><input type="checkbox" id="u2" checked><span class="box"></span>Unit 2</label>
+        <label class="chip"><input type="checkbox" id="u3" checked><span class="box"></span>Unit 3</label>
         <label class="chip"><input type="checkbox" id="tCore" checked><span class="box"></span>應用字彙</label>
         <label class="chip"><input type="checkbox" id="tExtra"><span class="box"></span><span id="extraLabel">國小奠基字彙</span></label>
+        <label class="chip" id="recChip"><input type="checkbox" id="tRec"><span class="box"></span>認識字彙</label>
         <label class="chip"><input type="checkbox" id="tPhrase" checked><span class="box"></span>含片語・口語</label>
       </div>
       <div class="count-line">已選 <b id="nSel">0</b> 個字：<span class="peek" id="peek"></span></div>
@@ -387,7 +389,8 @@ const LOCK_GRADE = "9"; /* build: grade-only pages set "7" or "9" */
 /* ---------- word data (翰林版 115 學年度) ---------- */
 const UNITS = {
   "7-1":"Who's That?","7-2":"Where's the Comic Book?",
-  "9-1":"Have You Ever Been to an Art Museum?","9-2":"The Movie Looks Exciting"
+  "9-1":"Have You Ever Been to an Art Museum?","9-2":"The Movie Looks Exciting",
+  "7-3":"Open the Magic Door","9-3":"A Hero with Four Legs"
 };
 const RAW = {
 "7-1-core":`handsome|hand-some|英俊的|adj.
@@ -586,7 +589,116 @@ spread|spread|散播；（使）蔓延|v.
 by design|by de-sign|故意；特意|片語
 difference|dif-fer-ence|差別|n.
 source|source|來源|n.
-fact-checking|fact-check-ing|查證事實的|adj.`
+fact-checking|fact-check-ing|查證事實的|adj.`,
+"7-3-core":`guy|guy|人；傢伙|n.
+magic|mag-ic|神奇的；魔法|adj.; n.
+with|with|用；和|prep.
+can|can|可以；會|aux.
+many|man-y|許多（的）|adj.; pron.
+place|place|地方|n.
+use|use|使用|v.; n.
+sure|sure|當然；確定的|adv.; adj.
+let's|let's|讓我們一起…|片語
+careful|care-ful|小心的|adj.
+museum|mu-se-um|博物館|n.
+Hurry!|Hur-ry!|快點！|感嘆詞
+please|please|請；拜託|int.
+wait|wait|等待|v.
+man|man|男人（複數：men）|n.
+now|now|現在|adv.
+or|or|或者|conj.
+time|time|次；時間|n.
+wake up|wake up|醒來；叫醒…|片語
+class|class|課；班級|n.
+Oh my!|Oh my!|天哪！|感嘆詞
+see|see|看見|v.
+quiet|qui-et|安靜的|adj.
+turn off|turn off|關掉|片語
+sign|sign|標誌|n.
+talk|talk|說話|v.
+fight|fight|吵架；打架|v.; n.
+turn|turn|（依次輪到的）機會|n.
+follow|fol-low|遵守；跟隨|v.
+rule|rule|規則|n.
+safe|safe|安全的|adj.
+wash|wash|清洗|v.
+hand|hand|手|n.
+after class|af-ter class|下課後|片語`,
+"7-3-extra":`stand|stand|站立|v.
+sit|sit|坐|v.
+down|down|向下|adv.
+open|o-pen|打開|v.
+door|door|門|n.
+close|close|關閉；關上|v.
+write|write|寫字；寫|v.
+listen|lis-ten|聆聽；聽|v.
+be|be|是；存在|v.
+jump|jump|跳躍|v.
+do|do|做；助動詞|v.; aux.
+run|run|跑；奔跑|v.
+eat|eat|吃|v.
+drink|drink|喝|v.
+game|game|遊戲；比賽|n.
+play|play|玩；打（球）|v.
+read|read|閱讀|v.
+watch|watch|觀看；手錶|v.; n.
+dance|dance|跳舞|v.; n.
+draw|draw|畫畫|v.
+sing|sing|唱歌|v.`,
+"7-3-rec":`mummy|mum-my|木乃伊|n.
+rock|rock|石塊|n.
+dinosaur|di-no-saur|恐龍|n.
+lab|lab|實驗室|n.`,
+"9-3-core":`senior center|sen-ior cen-ter|樂齡中心|n.
+pleasure|pleas-ure|愉快；榮幸|n.
+attack|at-tack|攻擊|n.; v.
+toe|toe|腳趾|n.
+bridge|bridge|橋|n.
+drop|drop|（使）落下；丟下|v.
+smoke|smoke|煙霧；抽菸|n.; v.
+puppy|pup-py|幼犬|n.
+middle|mid-dle|中間|n.
+carry|car-ry|攜帶|v.
+note|note|紙條|n.
+wallet|wal-let|錢包|n.
+pocket|pock-et|口袋|n.
+pray|pray|祈求；祈禱|v.
+blow up|blow up|爆炸（三態：blow-blew-blown）|片語
+lie|lie|躺；臥（現在分詞：lying）|v.
+in time|in time|及時|片語
+area|ar-e-a|區域|n.
+glue|glue|膠水|n.
+paste|paste|黏貼|v.
+yard|yard|庭院|n.
+pipe|pipe|水管|n.
+bench|bench|長凳；長椅|n.
+badminton|bad-min-ton|羽毛球|n.
+tennis|ten-nis|網球|n.
+slide|slide|滑梯|n.
+seesaw|see-saw|翹翹板|n.
+swing|swing|鞦韆|n.
+tool|tool|工具|n.
+pot|pot|盆；鍋|n.
+seed|seed|種子|n.
+basket|bas-ket|籃子|n.
+bake|bake|烘焙|v.
+pack|pack|（一）副；包|n.
+fan|fan|風扇|n.
+notice|no-tice|注意到；告示|v.; n.
+gas|gas|（化學、天然）氣體；汽油|n.
+modern|mod-ern|現代的|adj.
+program|pro-gram|計畫；節目|n.
+side|side|側邊；面|n.
+somewhere|some-where|在某處|adv.
+missing|miss-ing|失蹤的；找不到的|adj.
+cheer... up|cheer... up|使…振作起來|片語`,
+"9-3-extra":`volunteer|vol-un-teer|自願參加；志工|v.; n.
+war|war|戰爭|n.
+bomb|bomb|炸彈|n.
+bark|bark|狗吠|v.
+address|ad-dress|地址|n.
+hero|he-ro|英雄|n.
+warn|warn|警告|v.`
 };
 const EXTRA_NAME = {"7":"國小奠基字彙","9":"認識字彙"};
 
@@ -595,9 +707,13 @@ const SECTIONS = {
   "7-1":[[1,9,"對話前半 Dialogue Part 1","怎麼稱讚別人、跟新同學打招呼？"],[10,13,"對話後半 Dialogue Part 2","怎麼說年紀、回應對方？"],[14,24,"主題字彙 Theme Words","職業和家人怎麼說？"],[25,29,"閱讀篇 Reading","怎麼介紹家人和學校？"]],
   "7-2":[[1,10,"對話前半 Dialogue Part 1","家裡有哪些房間？牆壁是什麼顏色？"],[11,17,"對話後半 Dialogue Part 2","還有哪些顏色和家裡的東西？"],[18,29,"主題字彙 Theme Words","文具、房間和位置介系詞"],[30,36,"閱讀篇 Reading","描述特別的地方要用哪些字？"]],
   "9-1":[[1,16,"對話篇 Dialogue","「你曾經…嗎？」要搭配哪些副詞？"],[17,23,"主題字彙 Theme Words","運動、考試和比賽相關的字"],[24,43,"閱讀篇 Reading","寫信、心情和煩惱相關的字"]],
-  "9-2":[[1,24,"對話篇 Dialogue","電影「看起來」怎麼樣？感受怎麼說？"],[25,28,"主題字彙 Theme Words","生活小物與動物"],[29,42,"閱讀篇 Reading","網路消息是真是假？"]]
+  "9-2":[[1,24,"對話篇 Dialogue","電影「看起來」怎麼樣？感受怎麼說？"],[25,28,"主題字彙 Theme Words","生活小物與動物"],[29,42,"閱讀篇 Reading","網路消息是真是假？"]],
+  "7-3":[[1,12,"對話前半 Dialogue Part 1","去博物館：可以做什麼？要小心什麼？"],[13,22,"對話後半 Dialogue Part 2","催人快一點、請人等一下怎麼說？"],[23,28,"主題字彙 Theme Words","哪些事情不可以做？"],[29,34,"閱讀篇 Reading","要遵守哪些規則才安全？"]],
+  "9-3":[[1,17,"對話篇 Dialogue","危險發生時，狗英雄做了什麼？"],[18,35,"主題字彙 Theme Words","庭院、公園和生活裡的東西"],[36,43,"閱讀篇 Reading","找不到的東西、讓人振作的字"]]
 };
 const EXTRA_CUE = {"7":"國小學過的字，還拼得出來嗎？","9":"認識字彙：看得懂、會唸就好"};
+const REC_CUE = "認識字彙：看得懂、會唸就好";
+const typeName = w => w.type === "core" ? "應用字彙" : w.type === "rec" ? "認識字彙" : EXTRA_NAME[w.grade];
 const SUMMARY = {
   "7-1":[
     "介紹別人用 <em>This is…</em>，回應用 <em>Nice to meet you.</em>；說年紀用 <em>…years old</em>。",
@@ -618,7 +734,17 @@ const SUMMARY = {
     "-ed 形容「人的感受」、-ing 形容「事物給人的感覺」：<em>bored</em>／<em>boring</em>、<em>excited</em>／<em>exciting</em>、<em>surprised</em>／<em>surprising</em>、<em>interested</em>。",
     "一字多義要看句子：<em>book</em>（v. 預訂）、<em>tell</em>（分辨）、<em>hit</em>（點擊數）、<em>set</em>（樹立）。",
     "網路相關：<em>Internet</em>（大寫 I）、<em>online</em>、<em>download</em>、<em>post</em>、<em>fake</em>、<em>right away</em>。",
-    "變化形：dig → dug → dug；lie → lying；<em>actor</em> → <em>actress</em>。"]
+    "變化形：dig → dug → dug；lie → lying；<em>actor</em> → <em>actress</em>。"],
+  "7-3":[
+    "祈使句用原形動詞開頭：<em>Open the door.</em>、<em>Be quiet.</em>；否定加 Don't：<em>Don't talk.</em>；加 <em>please</em> 更有禮貌。",
+    "<em>Let's</em> + 原形動詞（一起做…）；<em>can</em> + 原形動詞（可以；會）：Can I <em>use</em> it? / You can't <em>fight</em> here.",
+    "片語整組記：<em>wake up</em>、<em>turn off</em>、<em>after class</em>；驚嘆語：<em>Hurry!</em>、<em>Oh my!</em>",
+    "不規則複數：<em>man</em> → <em>men</em>。拼字陷阱：<em>careful</em>（字尾一個 l）、<em>museum</em>、<em>quiet</em>（不是 quite）。"],
+  "9-3":[
+    "片語要整組記：<em>blow up</em>（blow-blew-blown）、<em>in time</em>（及時）、<em>cheer… up</em>（使…振作）。",
+    "<em>lie</em> 一字兩義：U2 說謊（lie-lied-lied），U3 躺（lie-lay-lain），兩者的現在分詞都是 <em>lying</em>。",
+    "公園設施：<em>slide</em>、<em>seesaw</em>、<em>swing</em>、<em>bench</em>；球類：<em>badminton</em>、<em>tennis</em>。",
+    "拼字陷阱：<em>pleasure</em>（-sure）、<em>somewhere</em>、<em>missing</em>（雙 s）、<em>carry</em> → carried。"]
 };
 
 const norm = s => s.toLowerCase().replace(/[’‘]/g,"'").replace(/\.\.\./g," ").replace(/[.,!?…]/g,"").replace(/\s+/g," ").trim();
@@ -682,10 +808,10 @@ const $ = id => document.getElementById(id);
 const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const SPEAKER = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9Z" fill="var(--ink)"/><path d="M16 8.5a5 5 0 0 1 0 7" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg>';
-const POS_GRID = ["n.", "v.", "adj.", "adv.", "prep.", "conj.", "pron.", "片語"];
+const POS_GRID = ["n.", "v.", "adj.", "adv.", "prep.", "conj.", "pron.", "aux.", "int.", "片語"];
 function posHTML(w) {
   return POS_GRID.map(p => {
-    const on = w.pos.includes(p) || (p === "片語" && w.pos.some(x => /片語|口語/.test(x)));
+    const on = w.pos.includes(p) || (p === "片語" && w.pos.some(x => /片語|口語/.test(x))) || (p === "int." && w.pos.includes("感嘆詞"));
     return `<span class="${on ? "on" : ""}">${p}</span>`;
   }).join("");
 }
@@ -699,14 +825,15 @@ function savePrefs() { store.set("prefs", prefs); }
 /* ---------- setup ---------- */
 const d = new Date(); $("today").textContent = `${d.getFullYear()} / ${d.getMonth() + 1} / ${d.getDate()}`;
 function selected() {
-  const units = ["1", "2"].filter(u => $("u" + u).checked);
-  const types = [$("tCore").checked && "core", $("tExtra").checked && "extra"].filter(Boolean);
+  const units = ["1", "2", "3"].filter(u => $("u" + u).checked);
+  const types = [$("tCore").checked && "core", $("tExtra").checked && "extra", $("tRec").checked && prefs.grade === "7" && "rec"].filter(Boolean);
   return WORDS.filter(w => w.grade === prefs.grade && units.includes(w.unit) && types.includes(w.type) && ($("tPhrase").checked || !w.phrase));
 }
 function renderSetup() {
   $("g7").setAttribute("aria-pressed", prefs.grade === "7");
   $("g9").setAttribute("aria-pressed", prefs.grade === "9");
   $("extraLabel").textContent = EXTRA_NAME[prefs.grade];
+  $("recChip").hidden = prefs.grade !== "7";  // 九上的認識字彙就是 extra
   const sel = selected();
   $("nSel").textContent = sel.length;
   $("peek").textContent = sel.length ? sel.slice(0, 8).map(w => w.en).join(" · ") + (sel.length > 8 ? " …" : "") : "請至少勾選一個單元和一種字彙";
@@ -720,7 +847,7 @@ function renderSetup() {
 }
 $("g7").onclick = () => { if (LOCK_GRADE) return; prefs.grade = "7"; savePrefs(); renderSetup(); };
 $("g9").onclick = () => { if (LOCK_GRADE) return; prefs.grade = "9"; savePrefs(); renderSetup(); };
-["u1", "u2", "tCore", "tExtra", "tPhrase"].forEach(id => $(id).onchange = renderSetup);
+["u1", "u2", "u3", "tCore", "tExtra", "tRec", "tPhrase"].forEach(id => $(id).onchange = renderSetup);
 document.querySelectorAll("[data-q]").forEach(b => b.onclick = () => { prefs.q = b.dataset.q; savePrefs(); renderSetup(); });
 $("accUS").onclick = () => { prefs.accent = "US"; savePrefs(); renderSetup(); speak("Hello"); };
 $("accUK").onclick = () => { prefs.accent = "UK"; savePrefs(); renderSetup(); speak("Hello"); };
@@ -739,7 +866,7 @@ let playingAll = false;
 function renderNotes(list) {
   let html = "", lastGroup = "";
   list.forEach(w => {
-    const g = `UNIT ${w.unit} · ${w.type === "core" ? "應用字彙" : EXTRA_NAME[w.grade]}`;
+    const g = `UNIT ${w.unit} · ${typeName(w)}`;
     if (g !== lastGroup) { html += `<div class="group-h">${g} — ${esc(UNITS[w.grade + "-" + w.unit])}</div>`; lastGroup = g; }
     html += `<article class="wn" data-id="${w.id}">
       <div class="w"><div class="word"><button class="mini-say" data-say="${w.id}" aria-label="播放 ${esc(w.en)}">${SPEAKER}</button><span class="en-part">${esc(w.en)}</span></div>
@@ -794,6 +921,7 @@ function renderCornell(list) {
     const inUnit = list.filter(w => w.grade + "-" + w.unit === u);
     const num = w => +w.id.split("-").pop();
     const groups = SECTIONS[u].map(([a, b, name, cue]) => ({ name, cue, words: inUnit.filter(w => w.type === "core" && num(w) >= a && num(w) <= b) }));
+    groups.push({ name: "認識字彙", cue: REC_CUE, words: inUnit.filter(w => w.type === "rec") });
     groups.push({ name: EXTRA_NAME[grade], cue: EXTRA_CUE[grade], words: inUnit.filter(w => w.type === "extra") });
     const body = groups.filter(g => g.words.length).map(g =>
       `<div class="cn-sec"><div class="q">${g.cue}</div><div class="s">${g.name}</div></div>` +
@@ -1019,7 +1147,7 @@ if (LOCK_GRADE) {
   const g = LOCK_GRADE === "7" ? "國七上" : "國九上";
   prefs.grade = LOCK_GRADE;
   document.title = g + "單字拼字蜂";
-  document.querySelector(".logo small").textContent = `翰林版 115 學年度・${g} L1–L2 段考單字`;
+  document.querySelector(".logo small").textContent = `翰林版 115 學年度・${g} L1–L3 段考單字`;
   $(LOCK_GRADE === "7" ? "g9" : "g7").hidden = true;
   $("g" + LOCK_GRADE).style.cursor = "default";
   document.querySelector("#vSetup .step h2").lastChild.textContent = "年級";
