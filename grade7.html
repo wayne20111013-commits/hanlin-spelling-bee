@@ -2,9 +2,9 @@
 <html lang="zh-Hant"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="翰林版國七上 Unit 1–3 段考單字複習：聽音拼字、字母方塊、康乃爾筆記，全部有發音。">
+<meta name="description" content="翰林版國七上 Unit 1–4 段考單字複習：聽音拼字、字母方塊、康乃爾筆記，全部有發音。">
 <meta property="og:title" content="國七上單字拼字蜂">
-<meta property="og:description" content="翰林版國七上 Unit 1–3 段考單字複習：聽音拼字、字母方塊、康乃爾筆記，全部有發音。">
+<meta property="og:description" content="翰林版國七上 Unit 1–4 段考單字複習：聽音拼字、字母方塊、康乃爾筆記，全部有發音。">
 <title>國七上單字拼字蜂</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -243,8 +243,8 @@ button:focus-visible,input:focus-visible,.chip:focus-within{outline:3px solid va
     <div class="step">
       <h2><span class="n">1</span>選年級</h2>
       <div class="grades">
-        <button class="grade" id="g7" aria-pressed="true"><b>七年級・國七上</b><span>U1 Who's That? ／ U2 Where's the Comic Book? ／ U3 Open the Magic Door</span></button>
-        <button class="grade" id="g9" aria-pressed="false"><b>九年級・國九上</b><span>U1 Have You Ever Been to an Art Museum? ／ U2 The Movie Looks Exciting ／ U3 A Hero with Four Legs</span></button>
+        <button class="grade" id="g7" aria-pressed="true"><b>七年級・國七上</b><span>U1 Who's That? ／ U2 Where's the Comic Book? ／ U3 Open the Magic Door ／ U4 What Time Is the Concert?</span></button>
+        <button class="grade" id="g9" aria-pressed="false"><b>九年級・國九上</b><span>U1 Have You Ever Been to an Art Museum? ／ U2 The Movie Looks Exciting ／ U3 A Hero with Four Legs ／ U4 Smart Technology in Daily Life</span></button>
       </div>
     </div>
 
@@ -254,6 +254,7 @@ button:focus-visible,input:focus-visible,.chip:focus-within{outline:3px solid va
         <label class="chip"><input type="checkbox" id="u1" checked><span class="box"></span>Unit 1</label>
         <label class="chip"><input type="checkbox" id="u2" checked><span class="box"></span>Unit 2</label>
         <label class="chip"><input type="checkbox" id="u3" checked><span class="box"></span>Unit 3</label>
+        <label class="chip"><input type="checkbox" id="u4" checked><span class="box"></span>Unit 4</label>
         <label class="chip"><input type="checkbox" id="tCore" checked><span class="box"></span>應用字彙</label>
         <label class="chip"><input type="checkbox" id="tExtra"><span class="box"></span><span id="extraLabel">國小奠基字彙</span></label>
         <label class="chip" id="recChip"><input type="checkbox" id="tRec"><span class="box"></span>認識字彙</label>
@@ -390,7 +391,8 @@ const LOCK_GRADE = "7"; /* build: grade-only pages set "7" or "9" */
 const UNITS = {
   "7-1":"Who's That?","7-2":"Where's the Comic Book?",
   "9-1":"Have You Ever Been to an Art Museum?","9-2":"The Movie Looks Exciting",
-  "7-3":"Open the Magic Door","9-3":"A Hero with Four Legs"
+  "7-3":"Open the Magic Door","9-3":"A Hero with Four Legs",
+  "7-4":"What Time Is the Concert?","9-4":"Smart Technology in Daily Life"
 };
 const RAW = {
 "7-1-core":`handsome|hand-some|英俊的|adj.
@@ -698,7 +700,103 @@ bomb|bomb|炸彈|n.
 bark|bark|狗吠|v.
 address|ad-dress|地址|n.
 hero|he-ro|英雄|n.
-warn|warn|警告|v.`
+warn|warn|警告|v.`,
+"7-4-core":`music video|mu-sic vid-e-o|音樂影片|n.
+band|band|樂團|n.
+take a look|take a look|看一看|片語
+all|all|所有的|adj.
+cute|cute|可愛的|adj.
+great|great|棒的|adj.
+free|free|有空的|adj.
+weekend|week-end|週末|n.
+Saturday|Sat-ur-day|星期六|n.
+together|to-geth-er|一起|adv.
+ready|read-y|準備好的|adj.
+p.m.|p.m.|下午；晚上|adv.
+o'clock|o'clock|…點鐘|adv.
+day|day|日；天|n.
+today|to-day|今天|adv.; n.
+Friday|Fri-day|星期五|n.
+Sunday|Sun-day|星期日|n.
+Monday|Mon-day|星期一|n.
+Tuesday|Tues-day|星期二|n.
+Wednesday|Wed-nes-day|星期三|n.
+Thursday|Thurs-day|星期四|n.
+week|week|週；星期|n.
+a.m.|a.m.|上午；凌晨|adv.
+study|stud-y|研讀|v.
+English|Eng-lish|英文|n.
+take a walk|take a walk|散步|片語
+movie|mov-ie|電影|n.
+take a picture|take a pic-ture|拍照|片語
+party|par-ty|派對；宴會|n.
+report|re-port|報導|v.; n.
+popular|pop-u-lar|受歡迎的|adj.
+fan|fan|…迷|n.
+shake hands|shake hands|握手|片語
+everyone|ev-ery-one|每個人（= everybody）|pron.
+sign|sign|簽名|v.`,
+"7-4-extra":`morning|morn-ing|早晨；上午|n.
+afternoon|af-ter-noon|下午|n.
+evening|eve-ning|傍晚；晚上|n.
+night|night|夜晚；晚上|n.
+have|have|有；進行|v.
+ride|ride|騎；搭乘|v.
+sleep|sleep|睡覺|v.
+walk|walk|走路；散步|v.
+jump|jump|跳躍|v.
+dance|dance|跳舞|v.; n.
+sing|sing|唱歌|v.
+listen|lis-ten|聆聽；聽|v.
+play|play|玩；打球|v.
+read|read|閱讀|v.
+eat|eat|吃|v.
+drink|drink|喝|v.`,
+"7-4-rec":`K-pop|K-pop|韓國流行音樂|n.
+concert|con-cert|音樂會；演唱會|n.
+meet-and-greet|meet-and-greet|見面會|n.
+stage|stage|舞台|n.`,
+"9-4-core":`gate|gate|大門|n.
+file|file|檔案|n.
+quiz|quiz|小考|n.
+blackboard|black-board|黑板|n.
+chalk|chalk|粉筆|n.
+screen|screen|螢幕|n.
+error|er-ror|錯誤|n.
+button|but-ton|按鈕；鈕扣|n.
+enter|en-ter|輸入；進入|v.
+wake word|wake word|喚醒字詞|n.
+whether|wheth-er|是否|conj.
+list|list|清單；列出|n.; v.
+honey|hon-ey|親愛的（用於稱呼）|n.
+save|save|儲存|v.
+through|through|透過；憑藉|prep.
+if|if|是否|conj.
+not... anymore|not... an-y-more|不再…|片語
+voice assistant|voice as-sist-ant|語音助理|n.
+machine|ma-chine|機器|n.
+dozen|doz-en|（一）打|n.
+boil|boil|煮沸|v.
+refrigerator|re-frig-er-a-tor|冰箱（= fridge）|n.
+upload|up-load|上傳|v.
+e-mail|e-mail|電子郵件|n.
+key|key|鑰匙|n.
+the cloud|the cloud|雲端|n.
+type|type|打字|v.
+rise|rise|興起；上升|n.; v.
+collect|col-lect|收集|v.
+lamp|lamp|檯燈|n.
+couch|couch|沙發|n.
+heat|heat|加熱；熱|v.; n.
+cellphone|cell-phone|手機|n.
+correct|cor-rect|更正；正確的|v.; adj.
+appear|ap-pear|出現|v.
+place|place|放置|v.
+fat|fat|脂肪|n.
+point|point|對準；指|v.`,
+"9-4-extra":`code|code|碼；密碼|n.
+ability|a-bil-i-ty|能力|n.
+translate|trans-late|翻譯|v.`
 };
 const EXTRA_NAME = {"7":"國小奠基字彙","9":"認識字彙"};
 
@@ -709,7 +807,9 @@ const SECTIONS = {
   "9-1":[[1,16,"對話篇 Dialogue","「你曾經…嗎？」要搭配哪些副詞？"],[17,23,"主題字彙 Theme Words","運動、考試和比賽相關的字"],[24,43,"閱讀篇 Reading","寫信、心情和煩惱相關的字"]],
   "9-2":[[1,24,"對話篇 Dialogue","電影「看起來」怎麼樣？感受怎麼說？"],[25,28,"主題字彙 Theme Words","生活小物與動物"],[29,42,"閱讀篇 Reading","網路消息是真是假？"]],
   "7-3":[[1,12,"對話前半 Dialogue Part 1","去博物館：可以做什麼？要小心什麼？"],[13,22,"對話後半 Dialogue Part 2","催人快一點、請人等一下怎麼說？"],[23,28,"主題字彙 Theme Words","哪些事情不可以做？"],[29,34,"閱讀篇 Reading","要遵守哪些規則才安全？"]],
-  "9-3":[[1,17,"對話篇 Dialogue","危險發生時，狗英雄做了什麼？"],[18,35,"主題字彙 Theme Words","庭院、公園和生活裡的東西"],[36,43,"閱讀篇 Reading","找不到的東西、讓人振作的字"]]
+  "9-3":[[1,17,"對話篇 Dialogue","危險發生時，狗英雄做了什麼？"],[18,35,"主題字彙 Theme Words","庭院、公園和生活裡的東西"],[36,43,"閱讀篇 Reading","找不到的東西、讓人振作的字"]],
+  "7-4":[[1,10,"對話前半 Dialogue Part 1","週末有空嗎？要不要一起去？"],[11,16,"對話後半 Dialogue Part 2","演唱會幾點？今天星期幾？"],[17,28,"主題字彙 Theme Words","一週七天和週末活動"],[29,35,"閱讀篇 Reading","見面會上粉絲會做什麼？"]],
+  "9-4":[[1,17,"對話篇 Dialogue","可以請語音助理做哪些事？"],[18,27,"主題字彙 Theme Words","家裡和網路上的智慧科技"],[28,38,"閱讀篇 Reading","智慧科技怎麼改變生活？"]]
 };
 const EXTRA_CUE = {"7":"國小學過的字，還拼得出來嗎？","9":"認識字彙：看得懂、會唸就好"};
 const REC_CUE = "認識字彙：看得懂、會唸就好";
@@ -744,7 +844,17 @@ const SUMMARY = {
     "片語要整組記：<em>blow up</em>（blow-blew-blown）、<em>in time</em>（及時）、<em>cheer… up</em>（使…振作）。",
     "<em>lie</em> 一字兩義：U2 說謊（lie-lied-lied），U3 躺（lie-lay-lain），兩者的現在分詞都是 <em>lying</em>。",
     "公園設施：<em>slide</em>、<em>seesaw</em>、<em>swing</em>、<em>bench</em>；球類：<em>badminton</em>、<em>tennis</em>。",
-    "拼字陷阱：<em>pleasure</em>（-sure）、<em>somewhere</em>、<em>missing</em>（雙 s）、<em>carry</em> → carried。"]
+    "拼字陷阱：<em>pleasure</em>（-sure）、<em>somewhere</em>、<em>missing</em>（雙 s）、<em>carry</em> → carried。"],
+  "7-4":[
+    "問時間：<em>What time is it?</em> → It's seven <em>o'clock</em>.；<em>a.m.</em>（上午）、<em>p.m.</em>（下午、晚上）放在數字後面：at 7 p.m.。",
+    "星期七天開頭要大寫：<em>Monday</em>、<em>Tuesday</em>、<em>Wednesday</em>、<em>Thursday</em>、<em>Friday</em>、<em>Saturday</em>、<em>Sunday</em>；<em>weekend</em>＝週末。",
+    "take 片語：<em>take a look</em>、<em>take a walk</em>、<em>take a picture</em>；另記 <em>shake hands</em>。",
+    "一字多義：<em>sign</em>（U3 標誌 n.／U4 簽名 v.）、<em>free</em>（有空的）、<em>fan</em>（…迷）。拼字陷阱：<em>Wednesday</em>（第一個 d 不發音）、<em>together</em>。"],
+  "9-4":[
+    "<em>whether</em>／<em>if</em> 都可以表示「是否」：I don't know whether it will rain.；<em>not… anymore</em>＝不再…。",
+    "科技字：<em>screen</em>、<em>button</em>、<em>enter</em>、<em>save</em>、<em>upload</em>、<em>the cloud</em>、<em>e-mail</em>、<em>voice assistant</em>、<em>wake word</em>。",
+    "一字多義：<em>type</em>（U1 類型 n.／U4 打字 v.）、<em>place</em>（放置 v.）、<em>correct</em>（更正 v.／正確的 adj.）、<em>point</em>（對準）。",
+    "拼字陷阱：<em>refrigerator</em>（= fridge）、<em>through</em>、<em>whether</em>（不是 weather）、<em>dozen</em>、<em>machine</em>。"]
 };
 
 const norm = s => s.toLowerCase().replace(/[’‘]/g,"'").replace(/\.\.\./g," ").replace(/[.,!?…]/g,"").replace(/\s+/g," ").trim();
@@ -753,7 +863,8 @@ for (const [key, block] of Object.entries(RAW)) {
   const [grade, unit, type] = key.split("-");
   block.split("\n").forEach((line, i) => {
     const [en, syll, zh, pos] = line.split("|");
-    const plain = en.replace("(s)", "s").replace(/\.\.\./g, " ").replace(/[.,!?]/g, "").replace(/\s+/g, " ").trim();
+    const plain = /^([a-z]\.)+$/i.test(en) ? en  // a.m. / p.m.
+      : en.replace("(s)", "s").replace(/\.\.\./g, " ").replace(/[.,!?]+$/, "").replace(/\s+/g, " ").trim();
     const alts = [norm(plain)];
     if (en.includes("(s)")) alts.push(norm(en.replace("(s)", "")));
     WORDS.push({
@@ -825,7 +936,7 @@ function savePrefs() { store.set("prefs", prefs); }
 /* ---------- setup ---------- */
 const d = new Date(); $("today").textContent = `${d.getFullYear()} / ${d.getMonth() + 1} / ${d.getDate()}`;
 function selected() {
-  const units = ["1", "2", "3"].filter(u => $("u" + u).checked);
+  const units = ["1", "2", "3", "4"].filter(u => $("u" + u).checked);
   const types = [$("tCore").checked && "core", $("tExtra").checked && "extra", $("tRec").checked && prefs.grade === "7" && "rec"].filter(Boolean);
   return WORDS.filter(w => w.grade === prefs.grade && units.includes(w.unit) && types.includes(w.type) && ($("tPhrase").checked || !w.phrase));
 }
@@ -847,7 +958,7 @@ function renderSetup() {
 }
 $("g7").onclick = () => { if (LOCK_GRADE) return; prefs.grade = "7"; savePrefs(); renderSetup(); };
 $("g9").onclick = () => { if (LOCK_GRADE) return; prefs.grade = "9"; savePrefs(); renderSetup(); };
-["u1", "u2", "u3", "tCore", "tExtra", "tRec", "tPhrase"].forEach(id => $(id).onchange = renderSetup);
+["u1", "u2", "u3", "u4", "tCore", "tExtra", "tRec", "tPhrase"].forEach(id => $(id).onchange = renderSetup);
 document.querySelectorAll("[data-q]").forEach(b => b.onclick = () => { prefs.q = b.dataset.q; savePrefs(); renderSetup(); });
 $("accUS").onclick = () => { prefs.accent = "US"; savePrefs(); renderSetup(); speak("Hello"); };
 $("accUK").onclick = () => { prefs.accent = "UK"; savePrefs(); renderSetup(); speak("Hello"); };
@@ -1147,7 +1258,7 @@ if (LOCK_GRADE) {
   const g = LOCK_GRADE === "7" ? "國七上" : "國九上";
   prefs.grade = LOCK_GRADE;
   document.title = g + "單字拼字蜂";
-  document.querySelector(".logo small").textContent = `翰林版 115 學年度・${g} L1–L3 段考單字`;
+  document.querySelector(".logo small").textContent = `翰林版 115 學年度・${g} L1–L4 段考單字`;
   $(LOCK_GRADE === "7" ? "g9" : "g7").hidden = true;
   $("g" + LOCK_GRADE).style.cursor = "default";
   document.querySelector("#vSetup .step h2").lastChild.textContent = "年級";
