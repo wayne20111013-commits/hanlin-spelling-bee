@@ -875,6 +875,9 @@ for (const [key, block] of Object.entries(RAW)) {
     });
   });
 }
+// same unit, same Chinese (e.g. 是否 = whether / if): accept either answer
+for (const w of WORDS) for (const o of WORDS)
+  if (o !== w && o.grade === w.grade && o.unit === w.unit && o.zh === w.zh) w.alts.push(...o.alts);
 const byId = Object.fromEntries(WORDS.map(w => [w.id, w]));
 
 /* ---------- storage (per-browser convenience only) ---------- */
